@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/scriptorium.jpg" alt="Scriptorium — a digital scriptorium" width="720">
+</p>
+
 # Scriptorium
 
 > *Local document skills for heterodox writers — extract, correct, illuminate.*
