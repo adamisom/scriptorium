@@ -60,6 +60,10 @@ line 3576   doubled-word   "seeing seeing"
 
 Candidates only; the verification pass (or you) makes the call.
 
+**Modes.** Short input → *essay mode*: one careful single pass, because attention and recall stay high over a few thousand words. Book-length input → *book mode*: chunk into section-aligned pieces and run parallel find/verify agents, so each reads a small, high-focus slice instead of one giant pass where recall sags in the middle.
+
+**Learning your voice.** `anti-patterns.md` is the proofreader's memory of *your* prose. It reads the file before each run — respecting a *Deliberate style* list (quirks it must never flag) and weighting a *Recurring errors* list (mistakes you actually repeat) — and, after you rule on a run's findings, appends what it learned: a confirmed repeated mistake joins *Recurring errors*; a flag you overturned as intentional joins *Deliberate style*. Over time it gets quieter on your style and sharper on your real tics. It's a human-in-the-loop file, not magic — it improves only when you run that feedback loop.
+
 ---
 
 ## `inside-frame` — the Illuminator
@@ -73,7 +77,7 @@ Candidates only; the verification pass (or you) makes the call.
 3. You get: an evidence block of pulled quotes → a two-sentence thesis → a long review → a personal operating manual whose sections **adapt to the book** (always: a one-paragraph synthesis, a framework worksheet, an if/then action table, and "the one thing"; plus book-dependent sections — e.g. a decision scorecard or verbatim conversation scripts for a decision/relational book, which you'd drop for a history or science book) → a self-check the model scores itself on and revises against.
 4. If it hedges on the first pass, reply exactly: *"Re-read the evenhandedness_carveout and forbidden_phrases blocks. You violated both. Rewrite from the top, staying inside the authors' frame the whole way through."*
 
-For an essay rather than a book, use the template's **essay-mode** block: a ~1,200–2,000-word review and a lighter manual.
+**Essay mode.** For an essay rather than a book, the template's essay-mode block scales everything down — a ~1,200–2,000-word review, ~5–8 key terms, and a lighter manual (synthesis + one worksheet + an if/then table + the one thing) — while keeping the carve-out, forbidden phrases, and self-check intact.
 
 ---
 
