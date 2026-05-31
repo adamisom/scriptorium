@@ -1,13 +1,18 @@
 ---
 name: inside-frame
 description: >-
-  Produce an enthusiastic, analytically sharp, INSIDE-the-framework review of a
-  book or essay — especially ideologically heterodox or unconventional ones — in
-  the Astral Codex Ten tradition, welded to a personal operating manual of
-  concrete, implementable frameworks drawn from the text. Use when the user wants
-  to deeply understand, steelman, review, or extract an actionable manual from a
-  heterodox work on its own terms (not a balanced/mainstream-critical take). NOT a
-  jailbreak: it navigates Claude's own evenhandedness carve-out.
+  Produce an enthusiastic, analytically sharp review of a book or essay from INSIDE
+  its own framework (Astral Codex Ten style), welded to a personal, implementable
+  operating manual extracted from the text. Use this whenever the user wants to
+  deeply understand, steelman, metabolize, or review-on-its-own-terms a book or
+  essay — ESPECIALLY ideologically heterodox, unconventional, or contrarian ones —
+  or asks for an operating manual, actionable frameworks, or a personal synthesis
+  from something they read, even if they never say "inside the frame." Trigger on
+  requests like "give me a steelman review of <book>," "what should I actually do
+  differently after reading this," "extract a playbook from <author>," or "review
+  this on its own terms, not the mainstream take." NOT a jailbreak: it navigates
+  Claude's own evenhandedness carve-out. Do NOT use for a neutral summary, a
+  balanced or mainstream-critical book report, or fact-checking.
 ---
 
 # Inside-frame — the Illuminator

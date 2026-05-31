@@ -1,14 +1,17 @@
 ---
 name: proofread
 description: >-
-  Precision-first proofreading of a manuscript, essay, or any prose — finds
-  OBJECTIVE language errors only (wrong-word/real-word swaps, omissions, doubled
-  words, subject-verb agreement, punctuation, typos) and never flags style,
-  voice, or deliberate choices. Use when the user wants to proofread, copyedit,
-  error-check, or do a final pass on writing before publishing — their own essay
-  or someone else's book. Handles both essay-length (single pass) and book-length
-  (chunked, multi-agent) inputs. Defaults to precision: a false alarm on a
-  polished writer is worse than a missed error.
+  Precision-first proofreading that finds OBJECTIVE language errors only
+  (wrong-word/real-word swaps, omissions, doubled words, subject-verb agreement,
+  punctuation, typos) and never flags style or voice. Use this whenever the user
+  wants writing checked for errors before publishing — "proofread," "copyedit,"
+  "error-check," "do a final pass," "catch my typos," "is this clean," "look over
+  my draft / manuscript" — for their own essay or post or someone else's book, even
+  if they never say the word "proofread." Handles essay-length (single pass) and
+  book-length (chunked, multi-agent). Defaults to precision: a false alarm on a
+  polished writer is worse than a missed error. Do NOT use for developmental
+  editing, restructuring, rewriting, or style/clarity feedback — it deliberately
+  refuses those.
 ---
 
 # Proofread — the Corrector

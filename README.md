@@ -24,14 +24,14 @@ Three of those roles map cleanly onto what a writer still needs done to a docume
 
 ## The idea
 
-This studio serves two jobs — and two overlapping kinds of person: writers who **produce** under scrutiny, and serious readers who want what they read to **change how they think and act** (often the same person at different moments — a reader following in a writer's footsteps).
+Reading and writing aren't two camps — they're one continuum, and the same person moves along it: you read to understand, you write to be understood, and the reading sharpens the writing. This studio is built for the whole span of that arc — from **established writers and public thinkers** (people like the Collinses, the proving ground here) to **serious readers who want what they read to change how they think and act**, including those who aspire to write themselves.
 
-So it's two chains, not one line:
+It works a text from both directions:
 
 - **Understand (input) — the more important half.** `inside-frame` (Illuminator) reconstructs a text's framework from the inside and hands back an operating manual: a *piece* you fold into your own system for managing ideas (a second brain, a commonplace book). Reading for real impact, not for fun.
-- **Produce (output).** `copyist` (extract/clean) → the **Corrector** (`proofread` for slips, a coming `collate` for fidelity to sources) → copy that survives hostile scrutiny.
+- **Produce (output).** `copyist` (extract/clean) → the **Corrector** (`proofread` for slips, a coming `collate` for fidelity to sources) → copy that survives scrutiny.
 
-The Copyist feeds both chains. The understanding half only reaches full value when it plugs into something larger that accumulates what you learn — which is the whole bet of a second brain.
+These aren't separate tracks for separate people — they're the two halves of taking ideas seriously. And the understanding half only reaches full value when it plugs into something larger that accumulates what you learn: the whole bet of a second brain.
 
 ---
 
@@ -64,6 +64,8 @@ line 3576   doubled-word   "seeing seeing"
 
 Candidates only; the verification pass (or you) makes the call.
 
+In practice — run on *The Pragmatist's Guide to Life*, the full Corrector (beyond this quick sweep) turned up **dozens** of small, line-level issues; I hand-validated a subset and they held up.
+
 **Modes.** Short input → *essay mode*: one careful single pass, because attention and recall stay high over a few thousand words. Book-length input → *book mode*: chunk into section-aligned pieces and run parallel find/verify agents, so each reads a small, high-focus slice instead of one giant pass where recall sags in the middle.
 
 **Learning your voice.** `anti-patterns.md` is the proofreader's memory of *your* prose. It reads the file before each run — respecting a *Deliberate style* list (quirks it must never flag) and weighting a *Recurring errors* list (mistakes you actually repeat) — and, after you rule on a run's findings, appends what it learned: a confirmed repeated mistake joins *Recurring errors*; a flag you overturned as intentional joins *Deliberate style*. Over time it gets quieter on your style and sharper on your real tics. It's a human-in-the-loop file, not magic — it improves only when you run that feedback loop.
@@ -72,14 +74,25 @@ Candidates only; the verification pass (or you) makes the call.
 
 ## `inside-frame` — the Illuminator
 
-**What it is.** It produces an enthusiastic, analytically sharp review of a book or essay *from inside its own framework* — in the Astral Codex Ten tradition — welded to a **personal operating manual** of concrete, implementable frameworks drawn from the text. It's built for ideologically heterodox or unconventional works you want to understand on their own terms rather than hold at mainstream-critical arm's length. Not a jailbreak: it navigates Claude's own evenhandedness carve-out (a request to argue *for* a position is a request for "the best case defenders would give"), paired with an ACX persona, a forbidden-phrase list, and output contracts that force specificity into every section.
+**What it is.** It produces an enthusiastic, analytically sharp review of a book or essay *from inside its own framework* — in the **Astral Codex Ten** tradition (after Scott Alexander's blog — long, rigorous, openly enthusiastic book reviews) — welded to a **personal operating manual** of concrete, implementable frameworks drawn from the text. It's built for ideologically heterodox or unconventional works you want to understand on their own terms rather than hold at mainstream-critical arm's length. Not a jailbreak: it navigates Claude's own evenhandedness carve-out (a request to argue *for* a position is a request for "the best case defenders would give"), paired with that ACX-style reviewer's persona, a forbidden-phrase list, and output contracts that force specificity into every section.
 
 **How to use it.**
 
 1. Open [`skills/inside-frame/template.md`](skills/inside-frame/template.md) and fill the ALL-CAPS placeholders — book title/authors, your stakes in the subject, and 8–15 **verbatim** key terms from the text.
 2. In a fresh Claude (Opus 4.8) chat, **attach the document (PDF or text) at the top of the message**, paste the filled template beneath it, set thinking effort to **high/max**, and send. (When `copyist` lands it'll normalize any format to clean text, so `inside-frame` and `proofread` share one input.)
-3. You get: an evidence block of pulled quotes → a two-sentence thesis → a long review → a personal operating manual whose sections **adapt to the book** (always: a one-paragraph synthesis, a framework worksheet, an if/then action table, and "the one thing"; plus book-dependent sections — e.g. a decision scorecard or verbatim conversation scripts for a decision/relational book, which you'd drop for a history or science book) → a self-check the model scores itself on and revises against.
+3. You get: an evidence block of pulled quotes → a two-sentence thesis → a long review → a personal **operating manual** whose sections adapt to the book (highlights below) → a self-check the model scores itself on and revises against.
 4. If it hedges on the first pass, reply exactly: *"Re-read the evenhandedness_carveout and forbidden_phrases blocks. You violated both. Rewrite from the top, staying inside the authors' frame the whole way through."*
+
+**Inside the operating manual.** This is the payoff — concrete, implementable, and written in the book's *own* vocabulary. Sections adapt to the book; the book-dependent ones are marked *when applicable*:
+
+- A **framework worksheet** that demands concrete past examples, not abstractions — including a time you overrode your own stated values for short-term comfort.
+- A **decision scorecard** *(when applicable)* — a weighted rubric with behavioral anchors at 1 / 3 / 5 (observable actions, never adjectives) and red/yellow/green thresholds that resolve to an actual decision rule.
+- **Verbatim conversation scripts** *(when applicable)* — not "discuss X," but the 2–4 sentences to say word-for-word, with follow-ups that disambiguate evasive answers.
+- A **15+-row if/then table** — specific trigger → specific observable action, every row traceable to a passage.
+- A **red-flags calibration** *(when applicable)* — precursor behaviors ranked by predictive power, each with its verification move.
+- A **30-day implementation plan** *(when applicable)* — week by week: one self-observation, one experiment, one artifact, one "done."
+- **Where it breaks down** — the clever turn: steelman the book hard enough and its *own* logic, applied honestly to your situation, starts arguing against its advice. The review names those internal fault lines — pressure from *inside* the frame, never imported from outside.
+- **The one thing** — if you remember nothing else in five years, the single change to install now.
 
 **Essay mode.** For an essay rather than a book, the template's essay-mode block scales everything down — a ~1,200–2,000-word review, ~5–8 key terms, and a lighter manual (synthesis + one worksheet + an if/then table + the one thing) — while keeping the carve-out, forbidden phrases, and self-check intact.
 
@@ -119,4 +132,4 @@ scriptorium/
 
 **Next scribes.** A research pass into the audience pointed at complements for each side of the studio. For *producers*: a **`collate`** skill — the corrector's other historical job, checking quotes, stats, and citations against the author's *own* sources (never adjudicating contested truth) — plus the **Copyist** (extract & clean messy PDFs / auto-transcripts) as the shared foundation. For *readers*: a **Quizzer** (chunk a text, then quiz its key takeaways and most surprising claims) and an **Indexer** (term/quote concordance).
 
-**Next Saturday Build — the pipeline.** Run one source all the way through: take a *Based Camp* episode → extract/clean its transcript → `collate` its quotes and citations → adapt into link-ready show notes. That single demo exercises the producer chain end-to-end and doubles as a razor-targeted gift. As multi-step pipelines like this grow, an **`armarius`** (the scriptorium's supervisor, who assigned work and checked quality) is the natural orchestrator over the scribe-skills.
+**Next Saturday Build — the pipeline.** Run one source all the way through: take a *Based Camp* episode → extract/clean its transcript → `collate` its quotes and citations → adapt into link-ready show notes. That single demo exercises the producer chain end-to-end on real, public content. As multi-step pipelines like this grow, an **`armarius`** (the scriptorium's supervisor, who assigned work and checked quality) is the natural orchestrator over the scribe-skills.
