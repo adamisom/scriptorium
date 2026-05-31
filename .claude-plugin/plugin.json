@@ -1,0 +1,15 @@
+{
+  "name": "scriptorium",
+  "version": "0.1.0",
+  "description": "A digital scriptorium: local, privacy-first document skills for heterodox writers — extract (Copyist), correct (Corrector), and illuminate (Illuminator) any text.",
+  "author": {
+    "name": "Adam Isom"
+  },
+  "keywords": [
+    "proofreading",
+    "book-review",
+    "document-processing",
+    "writing",
+    "local-first"
+  ]
+}
