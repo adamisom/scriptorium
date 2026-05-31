@@ -1,0 +1,15 @@
+{
+  "name": "scriptorium",
+  "owner": {
+    "name": "Adam Isom"
+  },
+  "metadata": {
+    "description": "A digital scriptorium: local, privacy-first document skills for heterodox writers — extract, correct, and illuminate any text."
+  },
+  "plugins": [
+    {
+      "name": "scriptorium",
+      "source": "./"
+    }
+  ]
+}
