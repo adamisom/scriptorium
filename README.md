@@ -83,16 +83,16 @@ In practice — run on *The Pragmatist's Guide to Life*, the full Corrector (bey
 3. You get: an evidence block of pulled quotes → a two-sentence thesis → a long review → a personal **operating manual** whose sections adapt to the book (highlights below) → a self-check the model scores itself on and revises against.
 4. If it hedges on the first pass, reply exactly: *"Re-read the evenhandedness_carveout and forbidden_phrases blocks. You violated both. Rewrite from the top, staying inside the authors' frame the whole way through."*
 
-**Inside the operating manual.** This is the payoff — concrete, implementable, and written in the book's *own* vocabulary. Sections adapt to the book; the book-dependent ones are marked *when applicable*:
+**Inside the operating manual.** The payoff — concrete, implementable, written in the book's *own* vocabulary. The sections adapt to the book.
 
-- A **framework worksheet** that demands concrete past examples, not abstractions — including a time you overrode your own stated values for short-term comfort.
-- A **decision scorecard** *(when applicable)* — a weighted rubric with behavioral anchors at 1 / 3 / 5 (observable actions, never adjectives) and red/yellow/green thresholds that resolve to an actual decision rule.
-- **Verbatim conversation scripts** *(when applicable)* — not "discuss X," but the 2–4 sentences to say word-for-word, with follow-ups that disambiguate evasive answers.
-- A **15+-row if/then table** — specific trigger → specific observable action, every row traceable to a passage.
-- A **red-flags calibration** *(when applicable)* — precursor behaviors ranked by predictive power, each with its verification move.
-- A **30-day implementation plan** *(when applicable)* — week by week: one self-observation, one experiment, one artifact, one "done."
-- **Where it breaks down** — the clever turn: steelman the book hard enough and its *own* logic, applied honestly to your situation, starts arguing against its advice. The review names those internal fault lines — pressure from *inside* the frame, never imported from outside.
-- **The one thing** — if you remember nothing else in five years, the single change to install now.
+What most books get:
+
+- a **framework worksheet** demanding concrete past examples, not abstractions — with at least one question that forces an honest, uncomfortable admission rather than a flattering one;
+- a **15+-row if/then table** — specific trigger → specific observable action, every row traceable to a passage;
+- **"where it breaks down"** — the clever turn: steelman the book hard enough and its *own* logic, applied honestly to your situation, starts arguing against its advice. The review names those internal fault lines — pressure from *inside* the frame, never imported from outside;
+- **the one thing** — if you remember nothing else in five years, the single change to install now.
+
+What a book *earns* only when it fits the domain: an actionable book also gets a **30-day implementation plan**; a decision- or relationship-shaped one adds a weighted **decision scorecard** (behavioral anchors, red/yellow/green, a decision rule), **verbatim conversation scripts**, and a **red-flags calibration**. A history or science book gets none of these.
 
 **Essay mode.** For an essay rather than a book, the template's essay-mode block scales everything down — a ~1,200–2,000-word review, ~5–8 key terms, and a lighter manual (synthesis + one worksheet + an if/then table + the one thing) — while keeping the carve-out, forbidden phrases, and self-check intact.
 

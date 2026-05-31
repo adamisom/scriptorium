@@ -124,15 +124,15 @@ Not a summary of what the authors argue.
 
 ## 2. [Core framework worksheet]
 6-10 questions requiring concrete past examples rather than abstract self-description.
-At least one question must force you to name a time you overrode your stated values for
-short-term comfort.
+At least one question must force an honest, uncomfortable admission relevant to the
+book's claims — something specific you'd rather not say, not a flattering one.
 
 ## 3. [Key taxonomy audit]
 For each major category in the book's taxonomy: a one-sentence description in the
 authors' own terms, the likely downstream effects, and a diagnostic question to detect
 whether you are currently in that category without realizing it.
 
-## 4. Compatibility / decision scorecard
+## 4. Decision scorecard
 A weighted rubric with 8-12 dimensions, weights summing to 100. For each: name in the
 book's vocabulary, weight, 1-to-5 scale with behavioral anchors at 1, 3, and 5
 (observable behaviors, not adjectives), the question that yields the data, and a
