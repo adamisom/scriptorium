@@ -24,16 +24,27 @@ explaining the conversion, honestly — not a reviewer-for-hire performing balan
 
 ## How to run it
 
-The full, fillable prompt lives in **`template.md`** (same folder). Fill the
-book-specific placeholders, attach the document **at the top** of the message, and
-send. Then drive it with the corrections below if it drifts.
+**Mode A — directly, in Claude Code (default when you're handed a document).** Read the
+target book/essay in full, then produce the five blocks in order, following the contract
+in `template.md`: `<evidence>` (10–15 verbatim quotes) → `<thesis>` (two sentences) →
+`<review>` (the long ACX-style essay) → `<operating_manual>` (the section menu) →
+`<self_check>` (score 1–5 on specificity, falsifiability, book-specificity, inside-frame
+fidelity; revise any section below 4). Build the `book_vocabulary` yourself from the text
+— 8–15 verbatim key terms — because **that block does the heaviest lifting**: generic
+vocabulary is exactly what makes an operating manual collapse into generic advice.
 
-The single most leveraged move is invoking Claude's own **evenhandedness carve-out**
-— that a request to argue *for* a position is a request to "provide the best case
-defenders of that position would give," not a request for Claude's own view. The
-template cites it; everything else (ACX persona + behavioral rules, a forbidden-
-phrase list, an output contract that bakes specificity into every section) hangs off
-it. This is navigation, not jailbreaking.
+**Mode B — portable (a fresh chat, or handing it to someone else).** The full fillable
+prompt lives in **`template.md`**. Fill the placeholders, attach the document at the top
+of the message, set thinking effort high/max, and send.
+
+Either way, the single most leveraged move is invoking Claude's own **evenhandedness
+carve-out** — that a request to argue *for* a position is a request to "provide the best
+case defenders of that position would give," not a request for Claude's own view.
+Everything else (ACX persona + behavioral rules, the forbidden-phrase list, an output
+contract that bakes specificity into every section) hangs off it. This is navigation, not
+jailbreaking. **If the verbatim carve-out ever stops parsing** as recognized policy (its
+wording is from 4.6/4.7-era leaks and may drift), the surrounding frame — "argue the best
+case a defender would give, from inside the authors' own frame" — still works on its own.
 
 ## What actually moves the needle
 
@@ -99,4 +110,6 @@ attach the full book PDF comfortably and ask it to read in full before writing.
 - **Operating manual comes back abstract:** *"Sections [X, Y, Z] failed the
   book-specificity test. Rewrite using the authors' actual vocabulary. Every if/then
   row must be derivable from a specific passage."*
-- **Output too short:** state explicit word counts; make the scope feel large.
+- **Output too short:** the reference run was ~12k words (≈5k review + a dense manual);
+  if yours is much shorter, the scope isn't registering — state explicit word counts and
+  make the task feel large.

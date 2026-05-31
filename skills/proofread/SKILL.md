@@ -67,7 +67,8 @@ and reflow; line numbers are a best-effort convenience.
 If the source is a PDF→text extraction, expect artifacts — standalone/inline page
 numbers, running heads, sentences shattered across blank lines (sometimes one word
 per line), TOC dumps. **Mentally reassemble** the prose and **ignore artifacts — do
-not flag them.**
+not flag them.** Skip non-prose front/back matter (cover, copyright, TOC, index)
+unless whole-file completeness is explicitly wanted.
 
 ## Two modes
 
@@ -96,10 +97,11 @@ For book-length input, use the `Workflow` tool to parallelize:
    paragraph boundaries, each with a ~6-line tail overlap so nothing falls in a
    boundary crack. Small chunks keep each agent's attention high.
 3. **Pass 1 — parallel find:** one agent per chunk reads its own line range from
-   disk and returns structured findings.
+   disk and returns structured findings — pass each the **find-agent prompt** in
+   `references/agent-prompts.md`.
 4. **Pass 1 — verifier:** a second, *skeptical* agent per chunk re-reads the same
-   lines and rules confirmed / adjusted / rejected, **defaulting to reject**. This
-   is the core precision lever.
+   lines and rules confirmed / adjusted / rejected, **defaulting to reject** (the core
+   precision lever) — use the **verify-agent prompt** in `references/agent-prompts.md`.
 5. **Synthesis:** dedupe overlap double-reports (by quote substring), order by line,
    tally by type/confidence, write the CSV.
 6. *(Optional, for max recall)* **Pass 2 — independent second sample:** fresh
@@ -113,10 +115,13 @@ For book-length input, use the `Workflow` tool to parallelize:
    confidence.
 2. **High-confidence shortlist** — the items you are most sure are real.
 3. **Full CSV** (write to `<name>_findings.csv`), in order of appearance, columns:
-   `# | line | quoted_original | error_type | suggested_fix | confidence | why`
+   `# | line | found_in | quoted_original | error_type | suggested_fix | confidence | human_checked | why`
    - `error_type` ∈ {wrong-word, missing-word, doubled-word, subject-verb-agreement,
      punctuation, typo, other}
    - `confidence` ∈ {High, Med, Low}
+   - `found_in` ∈ {pass1, pass2, both} — which pass caught it (book mode); just `pass1`
+     in essay mode.
+   - `human_checked` — blank until a human rules on the row, then yes/no; tracks the audit.
    - `why` = one line; cite that the quote appears verbatim and the test you applied.
 
 ## Human-audit & the voice-learning loop
@@ -133,3 +138,25 @@ After the human rules, **update `anti-patterns.md`:**
 
 Over time this file becomes the user's personal style guide, and the proofreader
 gets quieter and sharper on their voice specifically.
+
+## Gauging reliability (no ground truth)
+
+You can't score recall without an answer key, but you can read the signals:
+- **Human-audit precision** — on the curated packet, the share of flags the human
+  confirms real. **Below ~90% → tighten the find prompt** (push "might be deliberate →
+  drop" harder) and re-scrutinize the weakest error class. Above it, trust the full set.
+- **Cross-pass corroboration** (book mode) — the share of pass-1 finds that pass 2
+  independently re-finds is evidence pass 1 was reliable; pass-2's *new* confirmed
+  errors estimate the single-pass miss rate.
+
+## Stronger recall (optional)
+
+Reach for these only when the basics leave errors on the table — and most want **clean
+text first** (the Copyist, when it lands):
+- **LanguageTool** (local, free, rule/n-gram) as a higher-precision mechanical pass —
+  but only on clean text; it drowns in extraction artifacts.
+- **Correct-then-diff** for omissions (the weakest class): have the model rewrite *only*
+  objective errors, then read the diff's insertions — dropped words surface as additions
+  better than find-and-report.
+- **Confusion-set gating** — a curated homophone/confusable list to lift confidence on
+  known pairs.
