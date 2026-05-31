@@ -110,7 +110,13 @@ Work through the book in this order, producing each block before the next:
 </process>
 
 <operating_manual_structure>
-CUSTOMIZE THE SECTIONS BELOW FOR YOUR BOOK AND STAKES.
+CUSTOMIZE THE SECTIONS BELOW FOR YOUR BOOK AND STAKES. Treat them as a MENU, not a
+fixed form. Always include 1 (synthesis), 2 (framework worksheet), 6 (if/then table),
+9 (where it breaks down), and 10 (the one thing). Include 3, 4, 5, 7, 8 only when the
+book's domain warrants them — the taxonomy audit (3), decision scorecard (4), verbatim
+conversation scripts (5), and red-flags calibration (7) suit decision-making or
+relational books and add noise to, say, a history or science book. Rename any section
+to fit the book's subject.
 
 ## 1. My synthesis in one paragraph
 First-person. "What I am taking from this book, given [my specific situation], is..."

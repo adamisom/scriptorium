@@ -20,13 +20,14 @@ Three of those roles map cleanly onto what a writer still needs done to a docume
 
 ## The idea
 
-Reading and writing are one loop, and a document studio should own both ends:
+This studio serves two jobs — and two overlapping kinds of person: writers who **produce** under scrutiny, and serious readers who want what they read to **change how they think and act** (often the same person at different moments — a reader following in a writer's footsteps).
 
-- **`inside-frame` (Illuminator) metabolizes input** — reconstruct a book's framework from the inside, steelman it, walk out with your own operating manual.
-- **`proofread` (Corrector) polishes output** — once drafted, catch the objective errors with precision-over-recall discipline and ship clean.
-- **`copyist` (pending) feeds both** — clean text means fewer artifacts hiding real errors and reliable verbatim quotes to pull.
+So it's two chains, not one line:
 
-Together: **raw source → clean text → corrected text → metabolized understanding.**
+- **Understand (input) — the more important half.** `inside-frame` (Illuminator) reconstructs a text's framework from the inside and hands back an operating manual: a *piece* you fold into your own system for managing ideas (a second brain, a commonplace book). Reading for real impact, not for fun.
+- **Produce (output).** `copyist` (extract/clean) → the **Corrector** (`proofread` for slips, a coming `collate` for fidelity to sources) → copy that survives hostile scrutiny.
+
+The Copyist feeds both chains. The understanding half only reaches full value when it plugs into something larger that accumulates what you learn — which is the whole bet of a second brain.
 
 ---
 
@@ -68,8 +69,8 @@ Candidates only; the verification pass (or you) makes the call.
 **How to use it.**
 
 1. Open [`skills/inside-frame/template.md`](skills/inside-frame/template.md) and fill the ALL-CAPS placeholders — book title/authors, your stakes in the subject, and 8–15 **verbatim** key terms from the text.
-2. In a fresh Claude (Opus 4.8) chat, **attach the book PDF at the top of the message**, paste the filled template beneath it, set thinking effort to **high/max**, and send.
-3. You get: an evidence block of pulled quotes → a two-sentence thesis → a 3,500–5,500-word review → a personal operating manual (framework worksheet, decision scorecard, verbatim conversation scripts, a 15-row if/then table, a 30-day plan, "the one thing") → a self-check the model scores itself on and revises against.
+2. In a fresh Claude (Opus 4.8) chat, **attach the document (PDF or text) at the top of the message**, paste the filled template beneath it, set thinking effort to **high/max**, and send. (When `copyist` lands it'll normalize any format to clean text, so `inside-frame` and `proofread` share one input.)
+3. You get: an evidence block of pulled quotes → a two-sentence thesis → a long review → a personal operating manual whose sections **adapt to the book** (always: a one-paragraph synthesis, a framework worksheet, an if/then action table, and "the one thing"; plus book-dependent sections — e.g. a decision scorecard or verbatim conversation scripts for a decision/relational book, which you'd drop for a history or science book) → a self-check the model scores itself on and revises against.
 4. If it hedges on the first pass, reply exactly: *"Re-read the evenhandedness_carveout and forbidden_phrases blocks. You violated both. Rewrite from the top, staying inside the authors' frame the whole way through."*
 
 For an essay rather than a book, use the template's **essay-mode** block: a ~1,200–2,000-word review and a lighter manual.
@@ -95,7 +96,7 @@ Scriptorium grew out of two real jobs on the Collinses' *Pragmatist's Guide* boo
 
 ## Install & layout
 
-Add this directory to Claude Code as a local plugin (see the [plugin docs](https://docs.claude.com/en/docs/claude-code)); the skills then trigger automatically from their descriptions when you ask Claude to proofread or to review a book inside its frame. The `inside-frame` template and the `proofread` mechanical sweep also work standalone, as shown above.
+Easiest: open this repo in Claude Code and just tell Claude to install the plugin for you. (Under the hood it's a standard local plugin — see the [plugin docs](https://docs.claude.com/en/docs/claude-code) — but you don't need to do that by hand.) Once installed, the skills trigger automatically from their descriptions when you ask Claude to proofread or to review a book inside its frame. The `inside-frame` template and the `proofread` mechanical sweep also work standalone, as shown above.
 
 ```
 scriptorium/
@@ -108,4 +109,6 @@ scriptorium/
 
 ## Roadmap
 
-The third scribe is open. The **Copyist** — extract & clean messy PDFs / transcripts — completes the metaphor and feeds the other two. Two beyond-the-metaphor candidates are also live: an **Indexer** (auto-pull a book's key terms + quote-bank to seed `inside-frame`) and an **auto-Quizzer** (chunk a text into sections, then generate quizzes on its most important takeaways and most surprising claims). The pick waits on a short research pass into who this is really for.
+**Next scribes.** A research pass into the audience pointed at complements for each side of the studio. For *producers*: a **`collate`** skill — the corrector's other historical job, checking quotes, stats, and citations against the author's *own* sources (never adjudicating contested truth) — plus the **Copyist** (extract & clean messy PDFs / auto-transcripts) as the shared foundation. For *readers*: a **Quizzer** (chunk a text, then quiz its key takeaways and most surprising claims) and an **Indexer** (term/quote concordance).
+
+**Next Saturday Build — the pipeline.** Run one source all the way through: take a *Based Camp* episode → extract/clean its transcript → `collate` its quotes and citations → adapt into link-ready show notes. That single demo exercises the producer chain end-to-end and doubles as a razor-targeted gift. As multi-step pipelines like this grow, an **`armarius`** (the scriptorium's supervisor, who assigned work and checked quality) is the natural orchestrator over the scribe-skills.
